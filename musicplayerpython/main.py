@@ -3,11 +3,19 @@ import json
 import time
 import spotipy
 import lyricsgenius as lg
+from tkinter import *
 
-SPOTIPY_CLIENT_ID = 'your_client_id'
-SPOTIPY_CLIENT_SECRET = 'your_client_secret'
+# app = Tk()
+# app.geometry("500x400")
+# # set_appearance_mode("system")
+# # btn = TkButton(master=app, text="Get Lyrics")
+# # btn.place(relx=0.5, rely=0.5, anchor="center")
+# app.mainloop()
+
+SPOTIPY_CLIENT_ID = 'eaf7df342a17456e8447699b9a171db2'
+SPOTIPY_CLIENT_SECRET = '2288665a6e1644cdbf70bcba2e01bc18'
 SPOTIPY_REDIRECT_URI = 'https://google.com'
-GENIUS_ACCESS_TOKEN = 'your_genius_access_token'
+GENIUS_ACCESS_TOKEN = 'DIWCH_mW4iARyeXGZhGwIkDRJD8g-T7oU6ylt5YuEonbKWHUAuZXCWJmj6vNeQH'
 
 scope = 'user-read-currently-playing'
 
@@ -63,7 +71,7 @@ while True:
                 previous_track_name = current_track_name
                 previous_track_artist = current_track_artist
         else:
-            print("No track is currently playing.")
+            print("")
 
         # Wait for a short duration before checking again
         time.sleep(5)
