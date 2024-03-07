@@ -4,6 +4,9 @@ import time
 import spotipy
 import lyricsgenius as lg
 from tkinter import *
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # app = Tk()
 # app.geometry("500x400")
@@ -12,10 +15,10 @@ from tkinter import *
 # # btn.place(relx=0.5, rely=0.5, anchor="center")
 # app.mainloop()
 
-SPOTIPY_CLIENT_ID = 'eaf7df342a17456e8447699b9a171db2'
-SPOTIPY_CLIENT_SECRET = '2288665a6e1644cdbf70bcba2e01bc18'
-SPOTIPY_REDIRECT_URI = 'https://google.com'
-GENIUS_ACCESS_TOKEN = 'DIWCH_mW4iARyeXGZhGwIkDRJD8g-T7oU6ylt5YuEonbKWHUAuZXCWJmj6vNeQH'
+SPOTIPY_CLIENT_ID = os.getenv('SPOTIPY_CLIENT_ID')
+SPOTIPY_CLIENT_SECRET = os.getenv('SPOTIPY_CLIENT_SECRET')
+GENIUS_ACCESS_TOKEN = os.getenv('GENIUS_ACCESS_TOKEN')
+SPOTIPY_REDIRECT_URI = os.getenv('SPOTIPY_REDIRECT_URI')
 
 scope = 'user-read-currently-playing'
 
